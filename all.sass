@@ -1,0 +1,83 @@
+$main: #424242
+$sec: #FFD366
+$fz: #4A4A4A
+
+@mixin bg-cover
+    background-size: cover
+    background-position: center
+@mixin size($w, $h)
+    width: $w
+    height: $h
+
+.wrap
+    max-width: 1024px
+    margin: 0 auto
+    & .container
+        width: 100%
+        background-color: $main
+        min-height: 300px
+        display: flex
+        justify-content: center
+        align-items: center
+        & .header__icon
+            +size(117px, 117px)
+            +bg-cover
+            margin-right: 97px
+        & .header__form-group
+            display: flex
+            flex-direction: column
+            width: 250px
+            color: $sec
+            font-size: 18px
+            margin-right: 53px
+            & input
+                padding: 4px 16px
+                margin-top: 7px
+                border: 2px solid $sec
+                border-radius: 10px
+                background: rgba(255,255,255,0.18)
+                font-size: 24px
+                color: #fff
+                &::placeholder
+                    color: rgba(255,255,255,0.50)
+            & #header__form-group__height-i
+                margin-bottom: 23px
+        & .header__result
+            background-color: $sec
+            +size(120px, 120px)
+            border-radius: 50%
+            font-size: 24px
+            cursor: pointer
+    & #bmi__records
+        background-color: #eee
+        color: $fz
+        & .bmi__records-title
+            text-align: center
+            font-size: 24px
+            padding-top: 48px
+            padding-bottom: 20px
+        & .bmi__records-list
+            padding: 16px 0px
+            margin: 0 auto
+            +size(750px, auto)
+            & .bmi__records-li
+                background-color: #fff
+                padding: 21px 0px
+                margin-bottom: 16px
+                list-style: none
+                border-left: solid 5px 
+                display: flex
+                & .bmi__records-span
+                    font-size: 20px
+                    display: block
+                    & .bmi__records-tag
+                        font-size: 12px
+    & #footer
+        min-height: 54px
+        display: flex
+        justify-content: center
+        background-color: $sec
+        & .footer__icon
+            +size(55px, 55px)
+            +bg-cover
+            margin: 18px 0px

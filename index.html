@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="wrap">
+      <header>
+        <div class="container">
+          <div class="header__icon" style="background-image:url('./images/BMICLogo.png')"></div>
+          <div class="header__form-group">
+            <label for="header__form-group__height-i" id="header__form-group__height-l">身高 cm</label>
+            <input type="number" id="header__form-group__height-i" placeholder="請輸入身高">
+            <label for="header__form-group__weight-i" id="header__form-group__weight-l">體重 kg</label>
+            <input type="number" id="header__form-group__weight-i" placeholder="請輸入體重">
+          </div>
+          <button class="header__result">看結果</button>
+        </div>
+      </header>
+      <section id="bmi__records">
+        <div class="bmi__records-title">BMI 紀錄</div>
+        <ul class="bmi__records-list"></ul>
+      </section>
+      <footer id="footer">
+        <div class="footer__icon" style="background-image:url('./images/BMICLogo.png')"></div>
+      </footer>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-database.js"></script>
+<script src="all.js"></script>
+</html>
